@@ -184,11 +184,11 @@ public class MainPaneController implements Initializable {
     }
 
     public void resize(MouseEvent event) {
-        if(resizeW + event.getScreenX() - resizeX > 625 && resizeH + event.getScreenY() - resizeY - 30 > 398){
+        if(resizeW + event.getScreenX() - resizeX > 0 && resizeH + event.getScreenY() - resizeY > 0){
             gui.mainStage.setWidth(resizeW + event.getScreenX() - resizeX);
             gui.mainStage.setHeight(resizeH + event.getScreenY() - resizeY);
             this.w = resizeW + event.getScreenX() - resizeX;
-            this.h = resizeH + event.getScreenY() - resizeY - 30;
+            this.h = resizeH + event.getScreenY() - resizeY;
             fitBackground();
         }
     }
